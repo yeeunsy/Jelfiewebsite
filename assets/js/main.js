@@ -4,6 +4,27 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+//----------- Main Text typing Effect ------------//
+const content = "Welcome to Jelfie's Dialog";
+const text = document.querySelector(".text");
+let i = 0;
+
+function sleep(delay){ 
+	const start = new Date().getTime(); 
+	while (new Date().getTime() < start + delay); 
+}
+
+function typing(){
+    let txt = content[i++];
+    text.innerHTML += txt=== "\n" ? "<br/>": txt;
+    if (i > content.length) {
+        text.textContent = "";
+        i = 0;
+		sleep(3000);
+    }
+}
+setInterval(typing, 200);
+
 (function($) {
 
 	var	$window = $(window),
