@@ -5,7 +5,7 @@
 */
 
 //----------- Main Text typing Effect ------------//
-const content = "Welcome to Jelfie's Dialog";
+const content = "Developer yeeunsy";
 const text = document.querySelector(".text");
 let i = 0;
 
@@ -23,7 +23,9 @@ function typing(){
 		sleep(3000);
     }
 }
-setInterval(typing, 200);
+setTimeout(function() {
+	setInterval(typing, 200);
+  }, 2000);
 
 (function($) {
 

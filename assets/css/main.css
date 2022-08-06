@@ -13,11 +13,13 @@
 	text-align: center;
 }
 
-.blink {
+/* 막대바 */
+.blink { 
 	animation: blink 0.7s infinite;
 	font-size: 2.5rem;
 }
 
+/* 반짝이는거 ?  */
 @keyframes blink {
 	to {
 		opacity: 0;
@@ -117,12 +119,13 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	/* Homepage bgc */
 	body {
 		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #7383e0 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #7383e0 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #7383e0 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #7383e0 15%, #5f4d93 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1942,7 +1945,7 @@ input, select, textarea {
 	input[type="button"],
 	button,
 	.button {
-		background-color: transparent;
+		background-color: #7383e0;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 		color: #ffffff !important;
 	}
@@ -1952,7 +1955,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 255, 255, 0.075);
+			background-color: #a1baf9;
 		}
 
 		input[type="submit"]:active,
@@ -1960,7 +1963,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: #a1baf9;
 		}
 
 		input[type="submit"].icon:before,
@@ -1974,9 +1977,9 @@ input, select, textarea {
 		input[type="submit"].primary,
 		input[type="reset"].primary,
 		input[type="button"].primary,
-		button.primary,
+		button.primary,	
 		.button.primary {
-			background-color: #8cc9f0;
+			background-color: #7383e0;
 			color: #ffffff !important;
 			box-shadow: none;
 		}
@@ -1986,7 +1989,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #9acff2;
+				background-color: #a1baf9;
 			}
 
 			input[type="submit"].primary:active,
@@ -1994,7 +1997,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #7ec3ee;
+				background-color: #a1baf9;
 			}
 
 			input[type="submit"].primary.icon:before,
@@ -3350,7 +3353,14 @@ input, select, textarea {
 
 		}
 
-/* Main */
+/* Main  */
+/* DarkMode */
+
+	@media (prefers-color-scheme: dark) {
+		/* dark mode인 경우의 CSS */
+  	}
+
+	/* ------------------------------------------------------------------------------------ */
 
 	#main {
 		background-color: #ffffff;
@@ -3391,14 +3401,15 @@ input, select, textarea {
 			border-color: #dddddd;
 		}
 
+		/* discord 입장 버튼 그냥 기본 버튼 */
 		#main input[type="submit"],
 		#main input[type="reset"],
 		#main input[type="button"],
 		#main button,
 		#main .button {
-			background-color: transparent;
+			background-color: #7383e0;
 			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #636363 !important;
+			color: #ffffff !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3406,7 +3417,7 @@ input, select, textarea {
 			#main input[type="button"]:hover,
 			#main button:hover,
 			#main .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: #a1baf9;
 			}
 
 			#main input[type="submit"]:active,
@@ -3414,7 +3425,7 @@ input, select, textarea {
 			#main input[type="button"]:active,
 			#main button:active,
 			#main .button:active {
-				background-color: rgba(222, 222, 222, 0.5);
+				background-color: #a1baf9;
 			}
 
 			#main input[type="submit"].icon:before,
@@ -3424,13 +3435,14 @@ input, select, textarea {
 			#main .button.icon:before {
 				color: rgba(99, 99, 99, 0.25);
 			}
-
+			
+			/* Jelfie Invite Btn */
 			#main input[type="submit"].primary,
 			#main input[type="reset"].primary,
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
+				background-color: #9575cd;
 				color: #ffffff !important;
 				box-shadow: none;
 			}
@@ -3440,16 +3452,16 @@ input, select, textarea {
 				#main input[type="button"].primary:hover,
 				#main button.primary:hover,
 				#main .button.primary:hover {
-					background-color: #9acff2;
+					background-color: #b39ddb;
 				}
 
-				#main input[type="submit"].primary:active,
+				/* #main input[type="submit"].primary:active,
 				#main input[type="reset"].primary:active,
 				#main input[type="button"].primary:active,
 				#main button.primary:active,
 				#main .button.primary:active {
-					background-color: #7ec3ee;
-				}
+					background-color: #9fa8da;
+				} */
 
 				#main input[type="submit"].primary.icon:before,
 				#main input[type="reset"].primary.icon:before,
@@ -3563,6 +3575,7 @@ input, select, textarea {
 			color: #636363;
 		}
 
+		/* Point dash ! */
 		#main header.major h2:after {
 			background-color: #dddddd;
 			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
